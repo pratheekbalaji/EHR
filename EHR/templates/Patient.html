@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/card.css">
+<link rel="stylesheet" type="text/css" href="../static/patient.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        body{
+
+            background-image:url(../static/bg.jpg);
+            background-size: 1940px;
+
+        }
+         header{
+            background-color: #27292c;
+        }
+
+    </style>
+
+</head>
+
+<header>
+    <img src="../static/logo.png">
+</header>
+
+<a href="{{ url_for('index')}}" class="w3-btn w3-black">Home Page</a>
+<div class="contact-area">
+
+    <div class="contact">
+<main>
+      <section>
+
+<div class="content">
+
+             <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/256492/_mLIxaKY_400x400.jpg" alt="Profile Image" style="width: 50%">
+
+     <aside>
+    <p> Patient Name: {{  patient_details['FullName'] }}</p>
+    <p> Gender: {{patient_details['Gender']}} </p>
+    <p>  Date of Birth: {{ patient_details['BirthDate'] }}</p>
+    <p> SSN: {{patient_details['SSN']}}</p>
+     </aside>
+</div>
+      </section>
+</main>
+    </div>
+</div>
+
+ <!-- card view-->
+<div class="text">
+<div class="padding">
+    <div class="row">
+  <div class="column">
+
+    <div class="card" style="background-color: aqua">
+
+        <a href= "{{ url_for('med')}}" > Medications
+             </a>
+
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" style="background-color: aqua">
+        <a href= "{{ url_for('con')}}"> Conditions
+
+        </a>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" style="background-color: aqua">
+         <a href= "{{ url_for('procedure')}}" > Procedures </a>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" style="background-color: aqua">
+         <a href= "{{ url_for('vital_details')}}"> Vitals
+
+         </a>
+    </div>
+  </div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

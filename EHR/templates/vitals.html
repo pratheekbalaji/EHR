@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <meta charset="UTF-8">
+    <style>
+        body{
+            background-color: aliceblue;
+        }
+         header{
+            background-color: #27292c;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <img src="../static/logo.png">
+</header>
+<a href="{{ url_for('detail')}}" class="w3-btn w3-black">Main Page</a>
+<div  id="chart" >
+{%if vital_details == ""%}
+    <p> Insufficient Data Available </p>
+    {%endif%}
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
+       <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script type="text/javascript">
+    var graphs = {{vital_details | safe}}
+    {%if vital_details!=""%}
+     Plotly.plot('chart', graphs, {})
+     {%endif%}
+
+
+</script>
+
+
+</body>
+</html>

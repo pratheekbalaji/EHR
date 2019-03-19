@@ -1,0 +1,40 @@
+ h1{
+            text-align: center;
+            font-size: 32pt;
+            padding-top:5%;
+        }
+        .padding{
+            padding: 5% 20% 20% 20%;;
+        }
+        table{
+            alignment: center;
+            font-size: 15px;
+            margin: auto;
+            table-layout:auto;
+
+        }
+        th
+            {
+            text-align:center
+            }
+
+
+        header{
+            background-color: #27292c;
+        }
+        body{
+            background-image: url(../static/bg2.png) ;
+        }
+    h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+    }
+#more {
+  cursor: pointer;
+  background: #eee;
+}
